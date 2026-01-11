@@ -100,3 +100,35 @@ ORA on KEGG identifies as Spincerebellar ataxia as top enrichment (see Figure 4)
 
 ### Comparison with proteomic results
 
+I compared the 369 genes of Figure 1 with the results of a proteomic study on 171 ME/CFS cases and 13,883 controls over 2895 proteins. The overlap with the proteins significantly associated with ME/CFS (total effect) is of 9 elements, which is not statistically significant by hypergeometric test, as indicated in the table below.
+
+| setA       | setB        | sizeA | sizeB | overlap | background | pvalue  | genes                                              |
+|------------|-------------|-------|-------|---------|------------|---------|----------------------------------------------------|
+| ME Module  | Proteomics  | 76    | 233   | 7       | 2895       | 4.13e-01| CD22/COLEC12/DDAH1/LEP/NTRK3/PALM2AKAP2/VIT          |
+
+### Prioritization of causal variants in a proband suspected of Mendelian ME/CFS
+
+WGS analysis of a proband with ME/CFS since his early twenthies and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes and SVs, distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each candidate gene, we derived all the interacting genes with a PPI probability above 0.4. Then we built a score, for each candidate, by summing up the PPI probability of the interacting genes included in the disease module of Figure 1. The result of the prioritization is indicated below
+
+| name   | NCBI.id | score | interacting                                                                 |
+|--------|---------|-------|------------------------------------------------------------------------------|
+| CDH13 | 1012    | 5.471 | INS/GRM7/FHIT/CSMD1/DNMT3B/CTNNA2/CDH12/HP/CDH13                               |
+| TFDP2 | 7029    | 5.367 | MOV10/CDC6/HDAC1/AGO1/MAML2/MAX/E2F6/EHMT1/NOTCH1                             |
+| PCGF6 | 84108   | 4.682 | HDAC1/CDC23/EHMT1/ASXL3/E2F6/MAX                                             |
+| CNTN6 | 27255   | 3.536 | TENM2/CHL1/ADGRL2/NOTCH1/PTPRG                                               |
+| PRKAB1| 5564    | 2.766 | RB1CC1/GRB2/TSC2/STIM2                                                      |
+| CHD9  | 80205   | 2.531 | SMARCD3/TOX3/CHD8/NCOR2/ABCA1                                               |
+| CNTN5 | 53942   | 2.293 | CHL1/CSMD1/PTPRG/CNTN4                                                      |
+| ITGA9 | 3680    | 1.775 | YWHAB/CRKL/COL4A4                                                          |
+| COL4A4| 1286    | 1.572 | COL19A1/COL4A4                                                             |
+| GALR3 | 8484    | 1.527 | C3/PDYN/GPSM2                                                              |
+| ALOX12| 239     | 1.286 | NTN1/DCC                                                                  |
+| LBR   | 3930    | 1.165 | CYP7B1/CH25H                                                              |
+| RECQL | 5965    | 0.941 | TOP1/CSE1L                                                                |
+| TNS2  | 23371   | 0.941 | UTRN/GRB2                                                                 |
+| PTPRM | 5797    | 0.922 | MDGA2/PTPN11                                                              |
+| GLIPR1| 11010   | 0.413 | SMARCD3                                                                  |
+| TYRO3 | 7301    | 0.402 | GRB2                                                                     |
+| EPX   | 8288    | 0     |                                                                          |
+| HEPH  | 9843    | 0     |                                                                          |
+
