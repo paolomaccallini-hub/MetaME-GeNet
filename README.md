@@ -108,7 +108,7 @@ ORA on KEGG identifies as Spincerebellar ataxia as top enrichment (see Figure 4)
 
 ### Comparison with proteomic results
 
-I compared the 369 genes of Figure 1 with the results of a proteomic study on 171 ME/CFS cases and 13,883 controls over 2895 proteins. The overlap with the proteins significantly associated with ME/CFS (total effect) is of 9 elements, which is not statistically significant by hypergeometric test, as indicated in the table below.
+I compared the 369 genes of Figure 1 with the results of a proteomic study on 171 ME/CFS cases and 13,883 controls over 2895 proteins. The overlap with the proteins significantly associated with ME/CFS (total effect) is of 7 proteins, which is not statistically significant by hypergeometric test, as indicated in the table below.
 
 | setA       | setB        | sizeA | sizeB | overlap | background | pvalue  | genes                                              |
 |------------|-------------|-------|-------|---------|------------|---------|----------------------------------------------------|
