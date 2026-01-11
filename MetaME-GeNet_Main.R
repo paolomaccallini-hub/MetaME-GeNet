@@ -382,3 +382,64 @@ for (i in 1:length(pathway)) {
 #-------------------------------------------------------------------------------
 #
 Tissue.ORA(Disease_module)
+#
+#-------------------------------------------------------------------------------
+# Prioritize candidate genes of proband
+#-------------------------------------------------------------------------------
+#
+my.proband<-c("LBR","COL4A4","ITGA9","CNTN5","PRKAB1","GLIPR1","RECQL","TNS2","CHD9",
+              "EPX","ALOX12","GALR3","TFDP2","CNTN6","PCGF6","TYRO3","CDH13","PTPRM","HEPH")
+mygenes<-data.frame(Gene=my.proband)
+#
+# Use STRING preferred name for genes
+#
+gene.wo.STRING<-0
+index<-c()
+for (i in 1:nrow(mygenes)) {
+  new.name<-STRING.name(mygenes$Gene[i])
+  if (!is.na(new.name)) {
+    mygenes$name[i]<-new.name
+  } else if (is.na(new.name)) {
+    print(paste(mygenes$Gene[i],"is not present in STRING's database"))
+    gene.wo.STRING<-gene.wo.STRING+1
+    index<-c(index,i)
+  }
+}
+if (length(index)>0) mygenes<-mygenes[-index,] # only genes in STRING
+#
+# Edit
+#
+mygenes$NCBI.id<-rep(NA,nrow(mygenes))
+#
+# Add NCBI id
+#
+for (i in 1:nrow(mygenes)) {
+  mygenes$NCBI.id[i]<-Symbol2NCBI.db(mygenes$name[i])
+}
+mygenes<-as.data.frame(mygenes[,c("name","NCBI.id")])
+mygenes$score<-rep(NA,nrow(mygenes))
+mygenes$interacting<-rep(NA,nrow(mygenes))
+#
+# Find interacting genes
+#
+mygenes.list<-list()
+for (i in 1:nrow(mygenes)) {
+  mygenes.list[[i]]<-STRING2(mygenes$name[i])
+  df<-data.frame(name=mygenes$name[i],score=1)
+  mygenes.list[[i]]<-rbind(mygenes.list[[i]],df)
+}
+#
+# Compare interacting genes with Disease Module
+#
+for (i in 1:nrow(mygenes)) {
+  index<-which(mygenes.list[[i]]$name%in%Disease_module$name)
+  mygenes.list[[i]]<-mygenes.list[[i]][index,]
+}
+#
+# Assign a score to candidate genes and indicate relevant interacting genes
+#
+for (i in 1:nrow(mygenes)) {
+  mygenes$score[i]<-sum(mygenes.list[[i]]$score)
+  mygenes$interacting[i]<-paste0(mygenes.list[[i]]$name,collapse="/")
+}
+
