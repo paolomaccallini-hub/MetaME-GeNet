@@ -7,7 +7,7 @@
 The following two independently published ME/CFS-associated gene modules were used as primary inputs:
 
 | Number of cases | Sequencing Method | Gene-Mapping Method    | Genes | Criteria | Reference |
-|-----------------|:------------------|:-----------------------|---------|:---------|:----------|
+|----------------:|:------------------|:-----------------------|---------|:---------|:----------|
 |464              |WGS                | Deep Learning          | 115 | ICC-IOM  |([Zhang S 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12047926/))|
 |14767            |Axiom UKB array    | Combinatorial analysis | 259 | CCC-IOM  |([Sardell JM 2025](https://www.medrxiv.org/content/10.64898/2025.12.01.25341362v1))|
 
@@ -97,3 +97,6 @@ ORA on KEGG identifies as Spincerebellar ataxia as top enrichment (see Figure 4)
 <p align="left">
   <em>Figure 4. Top over-representation analysis on KEGG. Nodes in red indicate the overlap with the disease module of 369 genes. See `ORA_Disease_Module.tsv` for full list of significant results. </em>
 </p>
+
+### Comparison with proteomic results
+
