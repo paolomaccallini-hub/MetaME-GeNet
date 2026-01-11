@@ -4,7 +4,7 @@
 
 **Background**: Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS) is a complex, multifactorial disease with poorly understood aetiology and pathophysiology. 
 
-**Results**: I developed MetaME-GeNet, an R-based workflow for meta-analysis of ME/CFS gene sets through protein–protein interaction (PPI) networks. Two independently published ME/CFS gene modules — one derived from whole-genome sequencing with deep learning prioritization (464 cases) and another from combinatorial analysis of the DecodeME dataset (14,767 cases) — were integrated and mapped to a unified PPI graph using medium-confidence interactions from STRING v12.0. By combining these gene sets, I generated a disease module comprising 369 genes. The two gene sets converge to a connected graph of 276 genes that includes 112 of the 115 genes prioritized from WGS data and 168 of the 259 genes (64%) prioritized from DecodeME data. Tissue analysis reveals enrichment in genes expressed in the brain cortex, while cellular component analysis points to synapses in general, and to asymmetric synapses in particular (the most common excitatory synapses of the brain). This analysis shows a substantial overlap with the results of a previous meta-GWAS analysis on 21,500 ME/CFS cases ([Maccallini P 2025](https://github.com/paolomaccallini-hub/MetaME)). A comparative study with a prior proteomics dataset revealed modest overlap. Also, I show how to use this disease module to help prioritizing candidate genes in a suspected case of Mendelian ME/CFS. 
+**Results**: I developed MetaME-GeNet, an R-based workflow for meta-analysis of ME/CFS gene sets through protein–protein interaction (PPI) networks. Two independently published ME/CFS gene modules — one derived from whole-genome sequencing with deep learning prioritization (464 cases) and another from combinatorial analysis of the DecodeME dataset (14,767 cases) — were merged to a disease module comprising 369 genes. The two gene sets converge to a connected graph of 276 genes that includes 112 of the 115 genes prioritized from WGS data and 168 of the 259 genes (64%) prioritized from DecodeME data. Tissue analysis reveals enrichment in genes expressed in the brain cortex, while cellular component analysis points to synapses in general, and to asymmetric synapses in particular (the most common excitatory synapses of the brain). This analysis shows a substantial overlap with the results of a previous meta-GWAS analysis on 21,500 ME/CFS cases ([Maccallini P 2025](https://github.com/paolomaccallini-hub/MetaME)). A comparative study with a prior proteomics dataset revealed modest overlap. Also, I show how to use this disease module to help prioritizing candidate genes in a suspected case of Mendelian ME/CFS. 
 
 **Conclusions**: MetaME-GeNet provides a systematic approach for integrating heterogeneous gene prioritization results into a unified functional network framework. Application to ME/CFS data shows significant enrichment in cortical tissue, and suggests a potential involvement of neuronal synapses in the pathological mechanism of the disease.
 
@@ -56,7 +56,7 @@ The union of the two gene sets generates a list of 369 genes (Figure 1). The ove
 
 The list of 369 genes, with NCBI Entrez ID and STRING preferred name, is included in this repository (see `all_genes.tsv`). Also, the columns indicate the component they belong to and a score derived from their degree (average PPI score) normalized between zero and one. The same list is included in a format that can be used on Cytoscape (`All_genes_cytoscape.tsv`).
 
-### Tissue enrichment analysis
+### Tissue-enrichment analysis
 
 The results of over-representation analysis of the 369 genes of Figure 1 over the HUman Protein Atlas database, gives Figure 2. 
 
@@ -66,7 +66,7 @@ The results of over-representation analysis of the 369 genes of Figure 1 over th
   <em>Figure 2. Tissue-enrichment analysis by hypergeometric test of the 369 genes of Figure 1 against the Human Protein Atlas (HPA) database, with a background universe of 19699 genes. </em>
 </p>
 
-### Cellular Component analysis
+### Cellular-Component analysis
 
 We used Gene Ontology Cellular Component (GO CC) to further specify the result of tissue-enrichment. Below and in Figure 3, we report the top 10 results from GO CC enrichment. For the complete results, including also KEGG, Reactome, and Dsease Ontology, see file `ORA_Disease_Module.tsv`.
 
