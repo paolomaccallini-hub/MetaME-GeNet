@@ -2,7 +2,7 @@
 
 ## Abstract
 
-**Background**: Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS) is a complex, multifactorial disease with poorly understood etiology and pathophysiology. 
+**Background**: Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS) is a complex, multifactorial disease with poorly understood aetiology and pathophysiology. 
 
 **Results**: I developed MetaME-GeNet, an R-based workflow for meta-analysis of ME/CFS gene sets through protein–protein interaction (PPI) networks. Two independently published ME/CFS gene modules — one derived from whole-genome sequencing with deep learning prioritization (464 cases) and another from combinatorial analysis of the DecodeME dataset — were integrated and mapped to a unified PPI graph using medium-confidence interactions from STRING v12.0. By combining these gene sets, I generated a disease module comprising 369 genes. The two gene sets converge to a connected graph of 276 genes that includes 112 of the 115 genes prioritized from WGS data and 168 of the 259 genes (64%) prioritized from DecodeME data. Tissue analysis reveals enrichment in genes expressed in the brain cortex, while cellular component analysis points to synapses in general, and to asymmetric synapses in particular (the most common excitatory synapses of the brain). This analysis shows a substantial overlap with the results of a previous meta-GWAS analysis on 21,500 ME/CFS cases ([Maccallini P 2025](https://github.com/paolomaccallini-hub/MetaME)). A comparative study with a prior proteomics dataset revealed modest overlap. Also, I show how to use this disease module to help prioritizing candidate genes in a suspected case of Mendelian ME/CFS. 
 
