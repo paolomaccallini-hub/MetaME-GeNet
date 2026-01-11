@@ -116,7 +116,7 @@ I compared the 369 genes of Figure 1 with the results of a proteomic study on 17
 
 ### Prioritization of causal variants in a proband suspected of Mendelian ME/CFS
 
-WGS analysis of a proband with ME/CFS since his early twenthies and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes and SVs, distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each candidate gene, we derived all the interacting genes with a PPI probability above 0.4. Then we built a score, for each candidate, by summing up the PPI probability of the interacting genes included in the disease module of Figure 1. The result of the prioritization is indicated below
+WGS analysis of a proband with ME/CFS since his early twenties and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes and SVs, distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each candidate gene, we derived all the interacting genes with a PPI probability above 0.4. Then we built a score, for each candidate, by summing up the PPI probability of the interacting genes included in the disease module of Figure 1. The result of the prioritization is indicated below.
 
 | name   | NCBI.id | score | interacting                                                                 |
 |--------|---------|-------|------------------------------------------------------------------------------|
