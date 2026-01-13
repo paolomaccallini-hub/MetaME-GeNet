@@ -43,6 +43,10 @@ Pathway, tissue, disease, and cellular component enrichment analysis were perfor
 
 The background universe consisted of all STRING genes successfully mapped to Entrez IDs (size = 19,338). Multiple testing correction was applied using the Benjamini–Hochberg procedure, and only terms with adjusted p ≤ 0.05 were retained. Visualization of genes mapped to terms, was performed by function GOchord of package GOPlot.  
 
+### Prioritization of causal variants in a proband suspected of Mendelian ME/CFS
+
+WGS analysis of a proband with ME/CFS since his early twenties and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes and SVs, distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each candidate gene, we derived all the interacting genes with a PPI probability above 0.4. Then we built a score, for each candidate, by summing up the PPI probability of the interacting genes included in the disease module of Figure 1. The resulting score is then divided by the total number of interacting genes, to penalize genes with a higher number of interactions. Each gene is considered to interact with itself with a PPI score of 1. The same algorithm was applied to 1000 random genes from STRING data base, to derive a distribution to be used for one-tailed statistical test to assess score significance. 
+
 ## Results
 
 ### Gene overlap and gene-network representation
@@ -117,27 +121,32 @@ I compared the 369 genes of Figure 1 with the results of a proteomic study on 17
 
 ### Prioritization of causal variants in a proband suspected of Mendelian ME/CFS
 
-WGS analysis of a proband with ME/CFS since his early twenties and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes and SVs, distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each candidate gene, we derived all the interacting genes with a PPI probability above 0.4. Then we built a score, for each candidate, by summing up the PPI probability of the interacting genes included in the disease module of Figure 1. The result of the prioritization is indicated below.
+WGS analysis of a proband with ME/CFS since his early twenties and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes and SVs, distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each gene, a score and a relative p-value for interaction with the Disease Module of ME/CFS was calculate and a correction for multiple comparisons was applied (Bonferroni). The distribution of the score over 1000 random genes from STRING database is reported in Figure 5.
 
-| name   | NCBI.id | score | interacting                                                                 |
-|--------|---------|-------|------------------------------------------------------------------------------|
-| CDH13 | 1012    | 5.471 | INS/GRM7/FHIT/CSMD1/DNMT3B/CTNNA2/CDH12/HP/CDH13                               |
-| TFDP2 | 7029    | 5.367 | MOV10/CDC6/HDAC1/AGO1/MAML2/MAX/E2F6/EHMT1/NOTCH1                             |
-| PCGF6 | 84108   | 4.682 | HDAC1/CDC23/EHMT1/ASXL3/E2F6/MAX                                             |
-| CNTN6 | 27255   | 3.536 | TENM2/CHL1/ADGRL2/NOTCH1/PTPRG                                               |
-| PRKAB1| 5564    | 2.766 | RB1CC1/GRB2/TSC2/STIM2                                                      |
-| CHD9  | 80205   | 2.531 | SMARCD3/TOX3/CHD8/NCOR2/ABCA1                                               |
-| CNTN5 | 53942   | 2.293 | CHL1/CSMD1/PTPRG/CNTN4                                                      |
-| ITGA9 | 3680    | 1.775 | YWHAB/CRKL/COL4A4                                                          |
-| COL4A4| 1286    | 1.572 | COL19A1/COL4A4                                                             |
-| GALR3 | 8484    | 1.527 | C3/PDYN/GPSM2                                                              |
-| ALOX12| 239     | 1.286 | NTN1/DCC                                                                  |
-| LBR   | 3930    | 1.165 | CYP7B1/CH25H                                                              |
-| RECQL | 5965    | 0.941 | TOP1/CSE1L                                                                |
-| TNS2  | 23371   | 0.941 | UTRN/GRB2                                                                 |
-| PTPRM | 5797    | 0.922 | MDGA2/PTPN11                                                              |
-| GLIPR1| 11010   | 0.413 | SMARCD3                                                                  |
-| TYRO3 | 7301    | 0.402 | GRB2                                                                     |
-| EPX   | 8288    | 0     |                                                                          |
-| HEPH  | 9843    | 0     |                                                                          |
+<img width="862" height="520" alt="image" src="https://github.com/user-attachments/assets/634d0197-96fa-4b66-96a4-2ed6ecfcdc66" />
 
+<p align="left">
+  <em>Figure 5. Distribution of a score of interaction between 1000 random genes of the STRING database and the 369 genes of Figure 1. </em>
+</p>
+
+| Gene   | name   | score      | interacting                                                     | pvalue | p.adjust | NCBI.id |
+|--------|--------|------------|-----------------------------------------------------------------|--------|----------|---------|
+| CNTN6  | CNTN6  | 0.08223256 | TENM2/CHL1/ADGRL2/NOTCH1/PTPRG                                   | 0.01   | 0.19     | 27255   |
+| CNTN5  | CNTN5  | 0.05732500 | CHL1/CSMD1/PTPRG/CNTN4                                           | 0.025  | 0.475    | 53942   |
+| CDH13  | CDH13  | 0.05698958 | INS/GRM7/FHIT/CSMD1/DNMT3B/CTNNA2/CDH12/HP/CDH13                 | 0.026  | 0.494    | 1012    |
+| TFDP2  | TFDP2  | 0.04472500 | MOV10/CDC6/HDAC1/AGO1/MAML2/MAX/E2F6/EHMT1/NOTCH1                | 0.051  | 0.969    | 7029    |
+| PCGF6  | PCGF6  | 0.04375701 | HDAC1/CDC23/EHMT1/ASXL3/E2F6/MAX                                 | 0.052  | 0.988    | 84108   |
+| PTPRM  | PTPRM  | 0.03414815 | MDGA2/PTPN11                                                    | 0.082  | 1        | 5797    |
+| TNS2   | TNS2   | 0.02476316 | UTRN/GRB2                                                       | 0.192  | 1        | 23371   |
+| GALR3  | GALR3  | 0.02385938 | C3/PDYN/GPSM2                                                   | 0.197  | 1        | 8484    |
+| CHD9   | CHD9   | 0.02239823 | SMARCD3/TOX3/CHD8/NCOR2/ABCA1                                   | 0.214  | 1        | 80205   |
+| PRKAB1 | PRKAB1 | 0.01961702 | RB1CC1/GRB2/TSC2/STIM2                                          | 0.258  | 1        | 5564    |
+| ALOX12 | ALOX12 | 0.01549398 | NTN1/DCC                                                        | 0.347  | 1        | 239     |
+| ITGA9  | ITGA9  | 0.01286232 | YWHAB/CRKL/COL4A4                                               | 0.406  | 1        | 3680    |
+| COL4A4 | COL4A4 | 0.01267742 | COL19A1/COL4A4                                                  | 0.407  | 1        | 1286    |
+| GLIPR1 | GLIPR1 | 0.01007317 | SMARCD3                                                        | 0.463  | 1        | 11010   |
+| RECQL  | RECQL  | 0.00847748 | TOP1/CSE1L                                                      | 0.499  | 1        | 5965    |
+| TYRO3  | TYRO3  | 0.00837500 | GRB2                                                           | 0.502  | 1        | 7301    |
+| LBR    | LBR    | 0.00706061 | CYP7B1/CH25H                                                    | 0.546  | 1        | 3930    |
+| EPX    | EPX    | 0          |                                                                 | 1      | 1        | 8288    |
+| HEPH   | HEPH   | 0          |                                                                 | 1      | 1        | 9843    |
