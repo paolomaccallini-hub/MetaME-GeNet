@@ -121,7 +121,7 @@ I compared the 369 genes of Figure 1 with the results of a proteomic study on 17
 
 ### Prioritization of causal variants in a proband suspected of Mendelian ME/CFS
 
-WGS analysis of a proband with ME/CFS since his early twenties and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes, and SVs distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each gene, a score and a relative p-value for interaction with the Disease Module of ME/CFS was calculate and a correction for multiple comparisons was applied (Bonferroni). The distribution of the score over 1000 random genes from STRING database is reported in Figure 5.
+WGS analysis of a proband with ME/CFS since his early twenties and of three second-degree healthy relatives, led to prioritization of several SNVs distributed on 12 genes, and SVs distributed on 9 genes ([Maccallini 2025](https://www.academia.edu/128882422/A_pipeline_for_the_discovery_of_causal_variants_in_Mendelian_diseases)). For each gene, a score and a relative p-value for interaction with the Disease Module of ME/CFS was calculate and a correction for multiple comparisons was applied (Bonferroni). The distribution of the score for 1000 random genes from STRING database is reported in Figure 5.
 
 <img width="862" height="520" alt="image" src="https://github.com/user-attachments/assets/634d0197-96fa-4b66-96a4-2ed6ecfcdc66" />
 
