@@ -104,7 +104,7 @@ ORA on KEGG identifies `Spincerebellar ataxia` as top enrichment (see Figure 4).
 <img width="1467" height="1736" alt="hsa05017 Disease_ORA" src="https://github.com/user-attachments/assets/34455da4-8886-4197-b516-a5c1dbaab432" />
 
 <p align="left">
-  <em>Figure 4. Top over-representation analysis on KEGG. Nodes in red indicate the overlap with the disease module of 369 genes. See `ORA_Disease_Module.tsv` for full list of significant results. </em>
+  <em>Figure 4. Top over-representation analysis on KEGG. Nodes in red indicate the overlap with the disease module of 369 genes. See ORA_Disease_Module.tsv for the full list of significant results. </em>
 </p>
 
 ### Comparison with proteomic results
