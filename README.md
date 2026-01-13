@@ -87,7 +87,7 @@ We used Gene Ontology Cellular Component (GO CC) to further specify the result o
 ![GO enrichment](https://github.com/user-attachments/assets/a0162a7a-c52f-4dd6-9738-83e21e5addf3)
 
 <p align="left">
-  <em>Figure 3. Gene Ontology Cellular Component over-representation analysis of the 369 genes of Figure 1, with a background universe of 19699 genes. Top ten results, after Benjamini-Hochberg correction. See `ORA_Disease_Module.tsv` for the full list significant results. </em>
+  <em>Figure 3. Gene Ontology Cellular Component over-representation analysis of the 369 genes of Figure 1, with a background universe of 19699 genes. Top ten results, after Benjamini-Hochberg correction. See ORA_Disease_Module.tsv for the full list significant results. </em>
 </p>
 
 ### Disease Ontology and KEGG
@@ -99,7 +99,7 @@ Over-representation analysis (ORA) with the Disease Ontology database identifies
 | DOID:0110734 | neurodegeneration with brain iron accumulation | 5/206     | 7.64e-05        | 0.0274          | 
 | DOID:1561   | cognitive disorder                              | 28/206    | 8.28e-05        | 0.0274          | 
 
-ORA on KEGG identifies as Spincerebellar ataxia as top enrichment (see Figure 4).
+ORA on KEGG identifies `Spincerebellar ataxia` as top enrichment (see Figure 4).
 
 <img width="1467" height="1736" alt="hsa05017 Disease_ORA" src="https://github.com/user-attachments/assets/34455da4-8886-4197-b516-a5c1dbaab432" />
 
