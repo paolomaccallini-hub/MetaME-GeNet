@@ -17,7 +17,7 @@ The following two independently published ME/CFS-associated gene modules were us
 
 | Number of cases | Sequencing Method | Gene-Mapping Method    | Genes | Criteria | Reference |
 |----------------:|:------------------|:-----------------------|---------|:---------|:----------|
-|464              |WGS                | Deep Learning          | 115 | ICC-IOM  |([Zhang S 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12047926/))|
+|283              |WGS                | Deep Learning          | 115 | ICC-IOM  |([Zhang S 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12047926/))|
 |14767            |Axiom UKB array    | Combinatorial analysis | 259 | CCC-IOM  |([Sardell JM 2025](https://www.medrxiv.org/content/10.64898/2025.12.01.25341362v1))|
 
 ### Protein-protein interactions and gene identifiers
